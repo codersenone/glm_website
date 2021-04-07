@@ -174,6 +174,10 @@ export default {
         });
     },
     numChange(i) {
+      if (i < 1) {
+        this.show_content[i].num = 1;
+        this.content[i].num = 1;
+      }
       this.content[i].num = this.show_content[i].num - 0;
       this.getTotal();
     },
